@@ -1,11 +1,14 @@
 import styled from "styled-components";
-import { Colors } from "../../../Constants/theme";
+import { Colors } from "../../Constants/theme";
 
 export const LoginContainer = styled.div`
   margin: 5em;
   height: 60vh;
   width: calc(100vw - 10em);
   margin-bottom: 10em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const CadastroCont = styled.div`
@@ -24,7 +27,7 @@ export const Login2Cont = styled.div`
   flex-direction: row;
   justify-content: space-between;
   height: 100%;
-  width: 100%;
+  width: ${(props) => (props.cadastro ? 100 : 50)}%;
 `;
 
 export const EntrarCont = styled.div`
