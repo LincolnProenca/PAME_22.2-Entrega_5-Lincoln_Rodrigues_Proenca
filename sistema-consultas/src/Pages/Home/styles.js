@@ -31,6 +31,7 @@ export const Middle = styled.div`
   background-color: ${Colors.white};
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 4em;
 `;
 
@@ -38,7 +39,7 @@ export const Texto = styled.div`
   width: 100%;
   font-size: 3.3em;
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 5vh;
 
   @media screen and (max-width: 800px) {
     font-size: max(3.3vw, 40px);
@@ -47,7 +48,7 @@ export const Texto = styled.div`
 
 export const ButtonContainer = styled.div`
   width: 100%;
-  height: 100%;
+  max-height: 52vh;
   display: flex;
   flex-direction: row;
   gap: 3vw;

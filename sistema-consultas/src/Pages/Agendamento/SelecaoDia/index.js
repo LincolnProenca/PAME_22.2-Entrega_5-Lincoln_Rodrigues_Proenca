@@ -4,22 +4,50 @@ import React from "react";
 import Header from "../../../Components/Header";
 import { useState } from "react";
 import Calendar from "react-calendar";
-import "../../../../node_modules/react-calendar/dist/Calendar.css";
+import "react-calendar/dist/Calendar.css";
+import TimePicker from "rc-time-picker";
+import "rc-time-picker/assets/index.css";
+
 import {
   Button,
   CalendarContainer,
   Container,
   DataSelecionada,
+  TimePickerContainer,
 } from "./styles";
 import { useNavigate } from "react-router-dom";
 
 function SelecaoDia() {
   const navigate = useNavigate();
-  const [date, setDate] = useState([new Date(), new Date()]);
-  console.log(date);
-  console.log(date[0].value);
-  console.log(date[1].toDateString());
-  console.log(date[0].toDateString() === date[1].toDateString());
+  const [date, setDate] = useState(new Date());
+  const [time, setTime] = useState("12:00");
+  console.log(time);
+
+  /* Traduzindo data */
+  const dictDia = {
+    Mon: "Seg",
+    Tue: "Ter",
+    Wed: "Qua",
+    Thu: "Qui",
+    Fri: "Sex",
+    Sat: "Sáb",
+    Sun: "Dom",
+  };
+
+  const dictMes = {
+    Jan: "Jan",
+    Feb: "Fev",
+    Mar: "Mar",
+    Apr: "Abr",
+    May: "Maio",
+    Jun: "Jun",
+    Jul: "Jul",
+    Aug: "Ago",
+    Sep: "Set",
+    Oct: "Out",
+    Nov: "Nov",
+    Dec: "Dez",
+  };
 
   function handleClick() {
     alert("Enviado!");
@@ -33,23 +61,38 @@ function SelecaoDia() {
           Escolha o dia que deseja agendar a consulta
         </h1>
         <CalendarContainer>
-          <Calendar onChange={setDate} value={date} selectRange={true} />
+          <Calendar onChange={setDate} value={date} selectRange={false} />
         </CalendarContainer>
-        {date[0].toDateString() !== date[1].toDateString() ? (
-          <>
-            <DataSelecionada>
-              De: {date[0].toDateString()}
-              &nbsp;|&nbsp; Até: {date[1].toDateString()}
-            </DataSelecionada>
-          </>
-        ) : (
-          <>
-            <DataSelecionada>
-              Data selecionada: {date[0].toDateString()}
-            </DataSelecionada>
-          </>
-        )}
+        <TimePickerContainer>
+          <TimePicker
+            style={{ transform: "scale(1.5)" }}
+            placeholder="Selecione a Hora"
+            format="HH:mm"
+            use12Hours={false}
+            focusOnOpen={true}
+            showSecond={false}
+            onChange={(e) => setTime(e.format("HH:mm"))}
+          />
+        </TimePickerContainer>
 
+        <DataSelecionada>
+          Data selecionada:{" "}
+          {date
+            .toDateString()
+            .split(" ")
+            .map(function (str) {
+              if (dictDia[str]) {
+                return dictDia[str];
+              } else if (dictMes[str]) {
+                return dictMes[str];
+              } else {
+                return str;
+              }
+            })
+            .join(" ")}
+          {" | "}
+          {time}
+        </DataSelecionada>
         <Button
           onClick={() => {
             handleClick();

@@ -22,6 +22,16 @@ export const CalendarContainer = styled.div`
   height: auto;
   width: 100%;
 `;
+export const TimePickerContainer = styled.div`
+  margin: 1em 0 0 0;
+  border: 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+`;
 
 export const DataSelecionada = styled.p`
   text-align: center;
@@ -41,6 +51,8 @@ export const Button = styled.button`
   color: ${Colors.dark_blue};
   cursor: pointer;
   &:hover {
+    transition: 0.1s;
+    background-color: #7f9fff;
     color: ${Colors.white};
   }
 
