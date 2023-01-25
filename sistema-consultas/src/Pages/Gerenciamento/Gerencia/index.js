@@ -1,7 +1,19 @@
 import React from "react";
 import CheckboxInput from "../../../Components/CheckboxInput";
 import Header from "../../../Components/Header";
-import { Checklist, Container, Dados, InputContainer } from "./styles";
+import {
+  Checklist,
+  Container,
+  Dados,
+  DadosContainer,
+  Enviar,
+  InputContainer,
+  InputContainer2,
+  InputInsumo,
+  InputQtd,
+  InputIF,
+  Texto,
+} from "./styles";
 
 function Gerencia() {
   const ListaEtapaAgendamento = [
@@ -26,7 +38,30 @@ function Gerencia() {
             })}
           </InputContainer>
         </Checklist>
-        <Dados></Dados>
+        <Dados>
+          <DadosContainer>
+            <h1>Entradas e Saídas</h1>
+            <InputContainer2>
+              <Texto>Entradas</Texto>
+              <InputInsumo placeholder="Insumo"></InputInsumo>
+              <InputQtd placeholder="Quantidade"></InputQtd>
+              <Enviar>Enviar</Enviar>
+            </InputContainer2>
+            <InputContainer2>
+              <Texto>Saídas</Texto>
+              <InputInsumo placeholder="Insumo"></InputInsumo>
+              <InputQtd placeholder="Quantidade"></InputQtd>
+              <Enviar>Enviar</Enviar>
+            </InputContainer2>
+            <InputContainer2>
+              <Texto>Consulta</Texto>
+              <InputInsumo placeholder="Paciente"></InputInsumo>
+              <InputIF placeholder="Início"></InputIF>
+              <InputIF placeholder="Fim"></InputIF>
+              <Enviar>Enviar</Enviar>
+            </InputContainer2>
+          </DadosContainer>
+        </Dados>
       </Container>
     </>
   );

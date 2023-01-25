@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import { Colors } from "../../Constants/theme";
 
+export const Pcursor = styled.p`
+  cursor: pointer;
+  color: hsl(230, 100%, 12%);
+`;
+
 export const Cont = styled.div`
   height: 100%;
   width: 100vw;

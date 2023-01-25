@@ -17,10 +17,9 @@ export const Checkbox = styled.input`
   border-radius: 5px;
   cursor: pointer;
   &:checked {
-    background-color: teal;
     text-align: center;
-    background: teal;
-    border-color: teal;
+    background: hsl(222, 100%, 65%);
+    border-color: hsl(222, 100%, 65%);
   }
   &:checked::after {
     content: "✓";

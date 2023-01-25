@@ -8,6 +8,7 @@ import {
   Input,
   Button,
   CadastroCont,
+  Pcursor,
 } from "./styles";
 
 function Login(props) {
@@ -28,7 +29,7 @@ function Login(props) {
               <Texto>{props.texto2}</Texto>
               <Input placeholder="email"></Input>
               <Input placeholder="senha"></Input>
-              <p className="esqueci">Esqueci minha senha</p>
+              <Pcursor>Esqueci minha senha</Pcursor>
               <Button onClick={aumentaretapa}>Entrar</Button>
             </EntrarCont>
             {props.cadastro ? (
