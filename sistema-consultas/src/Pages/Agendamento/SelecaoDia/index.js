@@ -57,9 +57,7 @@ function SelecaoDia() {
     <>
       <Header></Header>
       <Container>
-        <h1 className="text-center">
-          Escolha o dia que deseja agendar a consulta
-        </h1>
+        <h1>Escolha o dia que deseja agendar a consulta</h1>
         <CalendarContainer>
           <Calendar onChange={setDate} value={date} selectRange={false} />
         </CalendarContainer>

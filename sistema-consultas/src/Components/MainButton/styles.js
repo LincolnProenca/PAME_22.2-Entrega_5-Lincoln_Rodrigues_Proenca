@@ -17,13 +17,16 @@ export const Button = styled.button`
     transition: 0.2s;
     background-color: rgb(60, 100, 155);
   }
+
+  @media screen and (max-height: 517px) {
+    padding-top: 1vh;
+  }
 `;
 
 export const Img = styled.img`
-  flex: 1;
   margin-top: 8%;
-
-  height: max(50%, 10vh);
+  min-height: 5em;
+  height: 10vw;
   width: auto;
 
   @media screen and (max-width: 1160px) {

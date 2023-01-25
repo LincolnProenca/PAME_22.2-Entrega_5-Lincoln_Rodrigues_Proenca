@@ -9,7 +9,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  height: 100%;
 `;
 
 export const CalendarContainer = styled.div`
@@ -42,6 +42,7 @@ export const DataSelecionada = styled.p`
 export const Button = styled.button`
   width: 40%;
   height: 10%;
+  padding: 0.7em;
   border: none;
   border-radius: 2em;
   font-size: 1.5rem;
@@ -58,5 +59,8 @@ export const Button = styled.button`
 
   @media screen and (max-width: 750px) {
     width: 60%;
+  }
+  @media screen and (max-width: 300px) {
+    font-size: 7vw;
   }
 `;
