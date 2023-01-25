@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Login from "../../Components/Login";
+import Gerencia from "./Gerencia";
 
 function Gerenciamento() {
   const [etapa, setEtapa] = useState(0);
@@ -15,7 +16,7 @@ function Gerenciamento() {
         />
       );
     case 1:
-      return;
+      return <Gerencia></Gerencia>;
     default:
       return <h1>Erro</h1>;
   }

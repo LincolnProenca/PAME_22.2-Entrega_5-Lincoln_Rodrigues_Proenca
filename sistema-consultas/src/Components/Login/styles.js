@@ -1,14 +1,39 @@
 import styled from "styled-components";
 import { Colors } from "../../Constants/theme";
 
+export const Cont = styled.div`
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const LoginContainer = styled.div`
   margin: 5em;
   height: 60vh;
-  width: calc(100vw - 10em);
+  width: 80%;
   margin-bottom: 10em;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  @media screen and (max-width: 820px) {
+    height: 100%;
+    margin: 5vw;
+  }
+`;
+
+export const Login2Cont = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+
+  @media screen and (max-width: 820px) {
+    flex-direction: column;
+    width: ${(props) => (props.cadastro ? "100vw" : "80vw")};
+  }
 `;
 
 export const CadastroCont = styled.div`
@@ -20,14 +45,9 @@ export const CadastroCont = styled.div`
   align-items: flex-start;
   margin-left: 0.8em;
   margin-right: 0.8em;
-`;
-
-export const Login2Cont = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 100%;
-  width: ${(props) => (props.cadastro ? 100 : 50)}%;
+  @media screen and (max-width: 820px) {
+    padding: 10vw;
+  }
 `;
 
 export const EntrarCont = styled.div`
@@ -40,6 +60,9 @@ export const EntrarCont = styled.div`
   align-items: flex-start;
   margin-left: 0.8em;
   margin-right: 0.8em;
+  @media screen and (max-width: 820px) {
+    padding: 10vw;
+  }
 `;
 
 export const Texto = styled.h1`
@@ -54,7 +77,7 @@ export const Input = styled.input`
   width: 100%;
   padding: 0.2em;
   border-radius: 0;
-  background-color: ${Colors.white};
+  background-color: white;
   border-width: 1px;
   border-style: solid;
   border-color: ${Colors.dark_blue};
@@ -76,9 +99,17 @@ export const Button = styled.button`
   font-weight: bold;
   letter-spacing: 0.06em;
   transition: 0.2s;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
   &:hover {
     background-color: #bfc9ff;
     color: white;
     border-color: #bfc9ff;
+  }
+
+  @media screen and (max-width: 820px) {
+    width: 70%;
   }
 `;
