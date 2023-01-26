@@ -48,12 +48,12 @@ export const Button = styled.button`
   font-size: 1.5rem;
   text-transform: uppercase;
   font-weight: bold;
-  background-color: #5771f4;
+  background-color: rgb(54, 173, 190);
   color: ${Colors.dark_blue};
   cursor: pointer;
   &:hover {
     transition: 0.1s;
-    background-color: #7f9fff;
+    background-color: rgb(94, 223, 230);
     color: ${Colors.white};
   }
 
