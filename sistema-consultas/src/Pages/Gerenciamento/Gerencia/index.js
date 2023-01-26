@@ -54,8 +54,8 @@ function Gerencia() {
         <Checklist>
           <h1>Checklist de atendimento</h1>
           <InputContainer>
-            {ListaEtapaAgendamento.map(function (texto) {
-              return <CheckboxInput texto={texto}></CheckboxInput>;
+            {ListaEtapaAgendamento.map(function (texto, index) {
+              return <CheckboxInput key={index} texto={texto}></CheckboxInput>;
             })}
           </InputContainer>
         </Checklist>
