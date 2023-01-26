@@ -131,17 +131,15 @@ export const Texto = styled.div`
 export const ListaInsumosCont = styled.div`
   margin-left: 1em;
   display: flex;
-  flex-direction: row;
   align-items: space-between;
   justify-content: center;
 `;
 
 export const ListaInsumos = styled.div`
+  height: 100%;
   margin-left: 1em;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
   gap: 0.5em;
 `;
 

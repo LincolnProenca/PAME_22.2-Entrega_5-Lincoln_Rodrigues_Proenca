@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CheckboxInput from "../../../Components/CheckboxInput";
 import Header from "../../../Components/Header";
 import {
@@ -52,7 +52,10 @@ function Gerencia() {
   ];
 
   const [InsumosState, SetInsumos] = useState(Insumos);
-  const threePartIndex = Math.ceil(Insumos.length / 3);
+
+  useEffect(() => {
+    console.log("debug", InsumosState);
+  }, [InsumosState]);
 
   function handleClick(Tipo) {
     if (Tipo === "Entrada") {
@@ -67,12 +70,9 @@ function Gerencia() {
             break;
           }
         }
-        console.log(index);
         anterior[index].Qtd += parseInt(Qtd);
-        console.log(anterior);
         return anterior;
       });
-      console.log(InsumosState);
       let string = `Inserida(s) ${Qtd} unidade(s) de ${Insumo}`;
       alert(string);
     } else if (Tipo === "Saida") {
@@ -127,24 +127,6 @@ function Gerencia() {
           <h1>Principais Insumos</h1>
           <DadosContainer>
             <ListaInsumosCont>
-              <ListaInsumos>
-                {InsumosState.map(function (texto, index) {
-                  return (
-                    <TextoInsumos key={index}>
-                      {texto.name} : {texto.Qtd}
-                    </TextoInsumos>
-                  );
-                })}
-              </ListaInsumos>
-              <ListaInsumos>
-                {InsumosState.map(function (texto, index) {
-                  return (
-                    <TextoInsumos key={index}>
-                      {texto.name} : {texto.Qtd}
-                    </TextoInsumos>
-                  );
-                })}
-              </ListaInsumos>
               <ListaInsumos>
                 {InsumosState.map(function (texto, index) {
                   return (
