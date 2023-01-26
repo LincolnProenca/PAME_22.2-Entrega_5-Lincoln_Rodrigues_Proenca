@@ -40,6 +40,7 @@ export const DataSelecionada = styled.p`
 `;
 
 export const Button = styled.button`
+  max-width: 300px;
   width: 40%;
   height: 10%;
   padding: 0.7em;

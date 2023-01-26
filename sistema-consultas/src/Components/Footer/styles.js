@@ -52,6 +52,15 @@ export const Container22 = styled.div`
   color: white;
 `;
 
+export const Container23 = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  color: white;
+`;
+
 export const Container3 = styled.div`
   display: flex;
   align-items: flex-start;

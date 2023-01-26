@@ -127,3 +127,31 @@ export const Texto = styled.div`
     font-size: 3.2vw;
   }
 `;
+
+export const ListaInsumosCont = styled.div`
+  margin-left: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+  justify-content: center;
+`;
+
+export const ListaInsumos = styled.div`
+  margin-left: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5em;
+`;
+
+export const TextoInsumos = styled.div`
+  margin-left: 1em;
+  width: 7em;
+  font-size: 1.2em;
+
+  @media screen and (max-width: 730px) {
+    width: 80%;
+    font-size: 3.2vw;
+  }
+`;

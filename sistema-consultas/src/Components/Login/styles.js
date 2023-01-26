@@ -56,7 +56,6 @@ export const CadastroCont = styled.div`
 `;
 
 export const EntrarCont = styled.div`
-  height: 42%;
   background-color: hsl(233, 100%, 98%);
   flex: 1;
   padding: 5em;

@@ -12,6 +12,7 @@ import {
   Container1,
   Container2,
   Container22,
+  Container23,
   Container3,
   Container33,
   Container34,
@@ -88,7 +89,7 @@ function Footer() {
             </Container4>
           </Lista>
         </Container22>
-        <Container2>
+        <Container23>
           <Container3>
             <ImgIcon src={img7}></ImgIcon>
             <Titulo>Equipe Médica</Titulo>
@@ -107,7 +108,7 @@ function Footer() {
               <Titulo>Dr. 3</Titulo>
             </Container33>
           </Lista>
-        </Container2>
+        </Container23>
       </Container1>
     </FooterContainer>
   );

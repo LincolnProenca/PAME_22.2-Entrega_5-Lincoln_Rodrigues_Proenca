@@ -97,7 +97,7 @@ function SelecaoDia() {
             navigate("/");
           }}
         >
-          Enviar requisição
+          Agendar!
         </Button>
       </Container>
     </>
