@@ -71,12 +71,16 @@
 .img3 {
   height: 100%;
 }
+.img2 {
+  margin-top: 2em;
+}
 .banner1 {
   background-color: rgb(227, 227, 227);
 }
 .banner2 {
-  background-color: rgb(208, 123, 58);
+  background-color: rgb(233, 238, 236);
 }
+
 .text-head {
   color: rgb(0, 141, 163);
   font-size: 5vw;

@@ -10,7 +10,11 @@ function Rotas() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/agendamento" element={<Agendamento />} />
-        <Route exact path="/gerenciamento" element={<Gerenciamento />} />
+        <Route
+          exact
+          path="/funcionarios/atendimentos"
+          element={<Gerenciamento />}
+        />
       </Routes>
     </BrowserRouter>
   );

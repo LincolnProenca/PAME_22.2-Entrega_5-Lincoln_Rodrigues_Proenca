@@ -58,28 +58,50 @@ function Gerencia() {
   }, [InsumosState]);
 
   function handleClick(Tipo) {
+    console.log("ALOOO");
+    let index = null;
     if (Tipo === "Entrada") {
       const Insumo = document.getElementById("entradaIns").value;
       const Qtd = document.getElementById("entradaQtd").value;
-      SetInsumos(function (old) {
-        let anterior = old;
-        let index = 0;
-        for (let i = 0; i < InsumosState.length; i++) {
-          if (old.name === Insumo) {
-            index = i;
-            break;
-          }
+      let anterior = [...InsumosState];
+      for (let i = 0; i < anterior.length; i++) {
+        if (anterior[i].name === Insumo) {
+          index = i;
         }
+      }
+      if (Qtd !== "" && index !== null) {
         anterior[index].Qtd += parseInt(Qtd);
-        return anterior;
-      });
-      let string = `Inserida(s) ${Qtd} unidade(s) de ${Insumo}`;
-      alert(string);
+      }
+      SetInsumos(anterior);
+      if (Qtd !== "" && index !== null) {
+        let string = `Inserida(s) ${Qtd} unidade(s) de ${Insumo}`;
+        alert(string);
+        return;
+      } else {
+        alert("Quantidade ou Insumo inválido");
+        return;
+      }
     } else if (Tipo === "Saida") {
       const Insumo = document.getElementById("saidaIns").value;
       const Qtd = document.getElementById("saidaQtd").value;
-      let string = `Retirada(s) ${Qtd} unidade(s) de ${Insumo}`;
-      alert(string);
+      let anterior = [...InsumosState];
+      for (let i = 0; i < anterior.length; i++) {
+        if (anterior[i].name === Insumo) {
+          index = i;
+        }
+      }
+      if (Qtd !== "" && index !== null) {
+        anterior[index].Qtd -= parseInt(Qtd);
+      }
+      SetInsumos(anterior);
+      if (Qtd !== "" && index !== null) {
+        let string = `Retirada(s) ${Qtd} unidade(s) de ${Insumo}`;
+        alert(string);
+        return;
+      } else {
+        alert("Quantidade ou Insumo inválido");
+        return;
+      }
     } else if (Tipo === "Consulta") {
       const Paciente = document.getElementById("Paciente").value;
       const Inicio = document.getElementById("Inicio").value;

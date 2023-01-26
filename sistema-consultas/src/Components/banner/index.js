@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.css";
 import arrow from "./assets/arrow.png";
 import img1 from "./assets/kid1.JPG";
-import img2 from "./assets/kid2.jpeg";
+import img2 from "./assets/kid2.png";
 import img3 from "./assets/kid3.JPG";
 import { useState } from "react";
 

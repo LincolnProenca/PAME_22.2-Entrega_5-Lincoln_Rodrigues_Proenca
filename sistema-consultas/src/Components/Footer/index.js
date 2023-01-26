@@ -15,7 +15,6 @@ import {
   Container23,
   Container3,
   Container33,
-  Container34,
   Container4,
   FooterContainer,
   ImgIcon,
@@ -43,6 +42,7 @@ function Footer() {
       </TextoContainer>
       <Container1>
         <Container2>
+          {/* Esquerda */}
           <Container3>
             <ImgIcon src={img1}></ImgIcon>
             <Titulo>Convênios</Titulo>
@@ -54,6 +54,8 @@ function Footer() {
           </Lista>
         </Container2>
         <Container22>
+          {" "}
+          {/* Meio */}
           <Container3>
             <ImgIcon src={img2}></ImgIcon>
             <Titulo>Informações Gerais</Titulo>
@@ -64,7 +66,7 @@ function Footer() {
                 <ImgIcon src={img3}></ImgIcon>
                 <TextoLista>Especialidade</TextoLista>
               </Container3>
-              <SubTexto style={{ margin: "0 0 0 -3.5em" }}>Pediatria</SubTexto>
+              <SubTexto>Pediatria</SubTexto>
             </Container4>
             <Container4>
               <Container3>
@@ -81,20 +83,22 @@ function Footer() {
               <SubTexto>(11)99999-9999</SubTexto>
             </Container4>
             <Container4>
-              <Container34>
+              <Container3>
                 <ImgIcon style={{ margin: 0 }} src={img6}></ImgIcon>
                 <TextoLista>E-mail</TextoLista>
-              </Container34>
+              </Container3>
               <SubTexto>pediatria@gmail.com</SubTexto>
             </Container4>
           </Lista>
         </Container22>
         <Container23>
+          {" "}
+          {/* Direita */}
           <Container3>
             <ImgIcon src={img7}></ImgIcon>
             <Titulo>Equipe Médica</Titulo>
           </Container3>
-          <Lista style={{ gap: "2.2em" }}>
+          <Lista style={{ gap: "2.2em", padding: "0" }}>
             <Container33>
               <ImgProfile src={img8}></ImgProfile>
               <Titulo>Dr. 1</Titulo>
