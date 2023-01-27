@@ -81,8 +81,9 @@ export const InputInsumo = styled.input`
   height: 1.7em;
 `;
 export const InputQtd = styled.input`
+  border: 2px solid #333;
   margin-left: 0.5em;
-  width: 80px;
+  width: 100px;
   height: 1.7em;
   @media screen and (max-width: 730px) {
     width: 80%;
@@ -90,8 +91,9 @@ export const InputQtd = styled.input`
 `;
 
 export const InputIF = styled.input`
+  border: 2px solid #333;
   margin-left: 0.5em;
-  width: 32px;
+  width: 40px;
   height: 1.7em;
   @media screen and (max-width: 730px) {
     width: 80%;
@@ -101,7 +103,7 @@ export const InputIF = styled.input`
 export const Enviar = styled.button`
   margin-left: 1em;
   background-color: transparent;
-  height: 2.18em;
+  height: 2.65em;
   width: auto;
   border: 2px solid #333;
   font-weight: bold;
@@ -129,15 +131,13 @@ export const Texto = styled.div`
 `;
 
 export const ListaInsumosCont = styled.div`
-  margin-left: 1em;
+  width: 100%;
   display: flex;
-  align-items: space-between;
   justify-content: center;
 `;
 
 export const ListaInsumos = styled.div`
   height: 100%;
-  margin-left: 1em;
   display: grid;
   grid-template-columns: 33% 33% 33%;
   gap: 0.5em;
